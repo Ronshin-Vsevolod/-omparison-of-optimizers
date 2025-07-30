@@ -1,9 +1,0 @@
-torch
-torchvision
-lion-pytorch
-matplotlib
-pandas
-numpy
-flake8
-ruff
-pytest
