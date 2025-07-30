@@ -44,6 +44,5 @@ To investigate and compare the training speed, convergence behavior, and final a
 - torchvision
 - numpy
 - matplotlib
-- pytest
 
 
