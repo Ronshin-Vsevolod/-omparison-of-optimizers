@@ -48,7 +48,6 @@ def train_and_evaluate(optimizer_name, num_epochs, target_acc, train_loader, val
     else:
         raise ValueError(f"Unknown model name: {model_name}")
 
-    model = torch.compile(model)
     model = model.to(device)
     criterion = nn.CrossEntropyLoss()
     scheduler = None
