@@ -116,7 +116,7 @@ def train_and_evaluate(optimizer_name, num_epochs, target_acc, train_loader, val
             total += labels.size(0)
             correct += predicted.eq(labels).sum().item()
 
-        train_loss = running_loss / len(trainloader)
+        train_loss = running_loss / len(train_loader)
         train_acc = 100 * correct / total
         train_loss_list.append(train_loss)
         train_acc_list.append(train_acc)
@@ -140,7 +140,7 @@ def train_and_evaluate(optimizer_name, num_epochs, target_acc, train_loader, val
             _, predicted = outputs.max(1)
             total += labels.size(0)
             correct += predicted.eq(labels).sum().item()
-    test_loss /= len(testloader)
+    test_loss /= len(test_loader)
     test_acc = 100 * correct / total
 
     print(f"\n[{optimizer_name.upper()}] FINAL TEST RESULTS - Loss: {test_loss:.4f}, Accuracy: {test_acc:.2f}%")
